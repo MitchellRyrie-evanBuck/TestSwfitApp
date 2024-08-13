@@ -17,6 +17,7 @@ struct TestSwfitAppApp: App {
                 .preferredColorScheme(.dark)
               ContentView()
                 .previewInterfaceOrientation(.landscapeLeft)
+            SwiftUIView()
         }
     }
 }

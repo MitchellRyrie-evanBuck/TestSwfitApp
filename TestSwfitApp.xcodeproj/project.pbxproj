@@ -17,6 +17,8 @@
 		1FAC0F092C6516B900B81F25 /* profile.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 1FAC0F082C6516B900B81F25 /* profile.jpeg */; };
 		1FAC0F0B2C65194400B81F25 /*  NavigatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC0F0A2C65193400B81F25 /*  NavigatView.swift */; };
 		1FAC0F0D2C651EBA00B81F25 /* ContentForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC0F0C2C651E9E00B81F25 /* ContentForm.swift */; };
+		1FAC0F0F2C6A634F00B81F25 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC0F0E2C6A634F00B81F25 /* SwiftUIView.swift */; };
+		1FAC0F122C6BB30700B81F25 /* GridTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAC0F112C6BB2F800B81F25 /* GridTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		1FAC0F082C6516B900B81F25 /* profile.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profile.jpeg; sourceTree = "<group>"; };
 		1FAC0F0A2C65193400B81F25 /*  NavigatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " NavigatView.swift"; sourceTree = "<group>"; };
 		1FAC0F0C2C651E9E00B81F25 /* ContentForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentForm.swift; sourceTree = "<group>"; };
+		1FAC0F0E2C6A634F00B81F25 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SwiftUIView.swift; path = ../../SwiftUIView.swift; sourceTree = "<group>"; };
+		1FAC0F112C6BB2F800B81F25 /* GridTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +104,9 @@
 		1F11AE7A2C1F45EA002195D2 /* TestSwfitApp */ = {
 			isa = PBXGroup;
 			children = (
+				1FAC0F112C6BB2F800B81F25 /* GridTest.swift */,
 				1FAC0F0C2C651E9E00B81F25 /* ContentForm.swift */,
+				1FAC0F0E2C6A634F00B81F25 /* SwiftUIView.swift */,
 				1FAC0F0A2C65193400B81F25 /*  NavigatView.swift */,
 				1FAC0F082C6516B900B81F25 /* profile.jpeg */,
 				1F11AE7B2C1F45EA002195D2 /* TestSwfitAppApp.swift */,
@@ -271,6 +277,8 @@
 				1F11AE7E2C1F45EA002195D2 /* ContentView.swift in Sources */,
 				1F11AE7C2C1F45EA002195D2 /* TestSwfitAppApp.swift in Sources */,
 				1FAC0F0D2C651EBA00B81F25 /* ContentForm.swift in Sources */,
+				1FAC0F0F2C6A634F00B81F25 /* SwiftUIView.swift in Sources */,
+				1FAC0F122C6BB30700B81F25 /* GridTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
