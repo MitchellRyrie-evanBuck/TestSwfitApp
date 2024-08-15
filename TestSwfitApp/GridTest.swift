@@ -14,7 +14,7 @@ struct BoldAndItalicModifier: ViewModifier {
   }
 }
 
-struct ContentView: View {
+struct ContentGridView: View {
   let items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"]
   let columns = [
     GridItem(.flexible()),
@@ -41,6 +41,6 @@ struct ContentView: View {
 
 
 
-#Preview {
-    ContentView()
-}
+//#Preview {
+//    ContentView()
+//}
