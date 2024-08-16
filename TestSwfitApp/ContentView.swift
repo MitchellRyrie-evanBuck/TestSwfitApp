@@ -6,6 +6,8 @@
 //
 //
 import SwiftUI
+
+
 struct Example: Identifiable {
     let id = UUID()
     let name: String
@@ -17,7 +19,9 @@ struct ContentView: View {
           Example(name: "表单测试", destination: AnyView(ContentFormView())),
           Example(name: "导航测试", destination: AnyView(ContentNavView())),
           Example(name: "按钮测试", destination: AnyView(ContentButtonView())),
-          Example(name: "UI测试", destination: AnyView(SwiftUIView())),
+//          Example(name: "UI测试", destination: AnyView(SwiftUIView())),
+          Example(name: "State 数据", destination: AnyView(ContentStateBindView())),
+          
       ]
       
       var body: some View {
