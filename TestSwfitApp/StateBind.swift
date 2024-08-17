@@ -56,3 +56,6 @@ struct ColorPickerView: View {
     }
   }
 }
+#Preview {
+    ContentStateBindView()
+}

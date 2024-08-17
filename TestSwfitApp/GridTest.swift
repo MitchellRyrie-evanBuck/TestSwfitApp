@@ -41,6 +41,6 @@ struct ContentGridView: View {
 
 
 
-//#Preview {
-//    ContentView()
-//}
+#Preview {
+    ContentGridView()
+}

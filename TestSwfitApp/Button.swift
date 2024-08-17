@@ -52,3 +52,6 @@ struct ContentButtonView: View {
             }
     }
 }
+#Preview {
+    ContentButtonView()
+}

@@ -21,6 +21,11 @@ struct ContentView: View {
           Example(name: "按钮测试", destination: AnyView(ContentButtonView())),
 //          Example(name: "UI测试", destination: AnyView(SwiftUIView())),
           Example(name: "State 数据", destination: AnyView(ContentStateBindView())),
+          Example(name: "Observ 数据", destination: AnyView(ContentObservView())),
+          Example(name: "ObservableObject 数据", destination: AnyView(ContentStateAcrossView())),
+          Example(name: "StateObject 数据", destination: AnyView(ContentStateObjectView())),
+          Example(name: "Combine 数据", destination: AnyView(ContentCombineView())),
+          Example(name: "Storage 数据", destination: AnyView(ContentStorageView())),
           
       ]
       

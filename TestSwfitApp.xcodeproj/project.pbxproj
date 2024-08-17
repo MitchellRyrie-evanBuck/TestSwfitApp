@@ -45,11 +45,16 @@
 				" NavigatView.swift",
 				Assets.xcassets,
 				Button.swift,
+				Combine.swift,
 				ContentForm.swift,
 				ContentView.swift,
 				GridTest.swift,
+				Observ.swift,
 				"Preview Content/Preview Assets.xcassets",
+				StateAcross.swift,
 				StateBind.swift,
+				StateObject.swift,
+				Storage.swift,
 				TestSwfitAppApp.swift,
 			);
 			target = 1F11AE772C1F45EA002195D2 /* TestSwfitApp */;

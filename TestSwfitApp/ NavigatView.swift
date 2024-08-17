@@ -52,6 +52,6 @@ struct DetailView: View {
        }
 }
 
-//#Preview {
-//    ContentView()
-//}
+#Preview {
+    ContentNavView()
+}
