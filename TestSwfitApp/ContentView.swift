@@ -26,7 +26,7 @@ struct ContentView: View {
           Example(name: "StateObject 数据", destination: AnyView(ContentStateObjectView())),
           Example(name: "Combine 数据", destination: AnyView(ContentCombineView())),
           Example(name: "Storage 数据", destination: AnyView(ContentStorageView())),
-          
+          Example(name: "ContentObservableObjectView 数据", destination: AnyView(ContentObservableObjectView())),
       ]
       
       var body: some View {
