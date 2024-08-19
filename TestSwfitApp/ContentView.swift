@@ -13,7 +13,7 @@ struct Example: Identifiable {
     let name: String
     let destination: AnyView
 }
-struct ContentView: View {
+struct ContentMainView: View {
     let examples: [Example] = [
           Example(name: "网格测试", destination: AnyView(ContentGridView())),
           Example(name: "表单测试", destination: AnyView(ContentFormView())),
@@ -31,6 +31,22 @@ struct ContentView: View {
       
       var body: some View {
           NavigationView {
+//              LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2)) {
+//                              ForEach(examples) { example in
+//                                  NavigationLink(destination: example.destination) {
+//                                      VStack {
+//                                          Text(example.name)
+//                                              .font(.headline)
+//                                              .padding()
+//                                              .frame(maxWidth: .infinity)
+//                                              .background(Color.white)
+//                                              .cornerRadius(10)
+//                                              .shadow(radius: 5)
+//                                      }
+//                                      .padding()
+//                                  }
+//                              }
+//                          }
               List(examples) { example in
                   NavigationLink(destination: example.destination) {
                       Text(example.name)
@@ -39,6 +55,32 @@ struct ContentView: View {
               .navigationTitle("示例列表")
           }
       }
+}
+
+// 其他页面的示例
+struct OtherView: View {
+    var body: some View {
+        Text("其他页面内容")
+            .font(.largeTitle)
+            .padding()
+    }
+}
+
+// 主视图，包含底部切换栏
+struct ContentView: View {
+    var body: some View {
+        TabView {
+            ContentMainView()
+                .tabItem {
+                    Label("首页", systemImage: "house")
+                }
+            
+            OtherView()
+                .tabItem {
+                    Label("其他", systemImage: "star")
+                }
+        }
+    }
 }
 
 #Preview {
