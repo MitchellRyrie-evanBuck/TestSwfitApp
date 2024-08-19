@@ -13,40 +13,33 @@ struct Example: Identifiable {
     let name: String
     let destination: AnyView
 }
-struct ContentMainView: View {
-    let examples: [Example] = [
-          Example(name: "网格测试", destination: AnyView(ContentGridView())),
-          Example(name: "表单测试", destination: AnyView(ContentFormView())),
-          Example(name: "导航测试", destination: AnyView(ContentNavView())),
-          Example(name: "按钮测试", destination: AnyView(ContentButtonView())),
+
+let examples: [Example] = [
+      Example(name: "网格测试", destination: AnyView(ContentGridView())),
+      Example(name: "表单测试", destination: AnyView(ContentFormView())),
+      Example(name: "Text测试", destination: AnyView(ContentTextView())),
+      Example(name: "导航测试", destination: AnyView(ContentNavView())),
+      Example(name: "按钮测试", destination: AnyView(ContentButtonView())),
 //          Example(name: "UI测试", destination: AnyView(SwiftUIView())),
-          Example(name: "State 数据", destination: AnyView(ContentStateBindView())),
-          Example(name: "Observ 数据", destination: AnyView(ContentObservView())),
-          Example(name: "ObservableObject 数据", destination: AnyView(ContentStateAcrossView())),
-          Example(name: "StateObject 数据", destination: AnyView(ContentStateObjectView())),
-          Example(name: "Combine 数据", destination: AnyView(ContentCombineView())),
-          Example(name: "Storage 数据", destination: AnyView(ContentStorageView())),
-          Example(name: "ContentObservableObjectView 数据", destination: AnyView(ContentObservableObjectView())),
-      ]
-      
+      Example(name: "State 数据", destination: AnyView(ContentStateBindView())),
+      Example(name: "Observ 数据", destination: AnyView(ContentObservView())),
+      Example(name: "ObservableObject 数据", destination: AnyView(ContentStateAcrossView())),
+      Example(name: "StateObject 数据", destination: AnyView(ContentStateObjectView())),
+      Example(name: "Combine 数据", destination: AnyView(ContentCombineView())),
+      Example(name: "Storage 数据", destination: AnyView(ContentStorageView())),
+      Example(name: "ContentObservableObjectView 数据", destination: AnyView(ContentObservableObjectView())),
+  ]
+let examplesField: [Example] = [
+      Example(name: "网格测试", destination: AnyView(ContentGridView())),
+   
+  ]
+  
+
+struct ContentMainView: View {
+
       var body: some View {
           NavigationView {
-//              LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 2)) {
-//                              ForEach(examples) { example in
-//                                  NavigationLink(destination: example.destination) {
-//                                      VStack {
-//                                          Text(example.name)
-//                                              .font(.headline)
-//                                              .padding()
-//                                              .frame(maxWidth: .infinity)
-//                                              .background(Color.white)
-//                                              .cornerRadius(10)
-//                                              .shadow(radius: 5)
-//                                      }
-//                                      .padding()
-//                                  }
-//                              }
-//                          }
+
               List(examples) { example in
                   NavigationLink(destination: example.destination) {
                       Text(example.name)
@@ -60,9 +53,25 @@ struct ContentMainView: View {
 // 其他页面的示例
 struct OtherView: View {
     var body: some View {
-        Text("其他页面内容")
-            .font(.largeTitle)
-            .padding()
+        NavigationView {
+            ScrollView {  // 添加 ScrollView 以允许滚动
+                LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 3)) {
+                    ForEach(examplesField) { example in
+                        NavigationLink(destination: example.destination) {
+                            VStack {
+                                Text(example.name)
+                                    .frame(maxWidth: .infinity)
+                                    .frame(height: 100)
+                                    .background(.blue)
+                                    .modifier(BoldAndItalicModifier())
+                                    .foregroundColor(.white)
+                            }
+                        }
+                    }
+                }
+            }
+            .navigationTitle("示例列表") // 如果需要，可以为 NavigationView 添加标题
+        }
     }
 }
 
@@ -77,7 +86,7 @@ struct ContentView: View {
             
             OtherView()
                 .tabItem {
-                    Label("其他", systemImage: "star")
+                    Label("textField", systemImage: "star")
                 }
         }
     }
