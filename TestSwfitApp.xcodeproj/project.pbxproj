@@ -42,22 +42,23 @@
 		1F1494E92C6FAAA400D81305 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				" NavigatView.swift",
 				Assets.xcassets,
-				Button.swift,
-				Combine.swift,
-				ContentForm.swift,
-				ContentView.swift,
-				Environment.swift,
-				GridTest.swift,
-				Observ.swift,
-				ObservableObject.swift,
-				"Preview Content/Preview Assets.xcassets",
-				StateAcross.swift,
-				StateBind.swift,
-				StateObject.swift,
-				Storage.swift,
 				TestSwfitAppApp.swift,
+				"Views/ NavigatView.swift",
+				Views/Button.swift,
+				Views/Combine.swift,
+				Views/ContentForm.swift,
+				Views/ContentView.swift,
+				Views/Environment.swift,
+				Views/GridTest.swift,
+				Views/Observ.swift,
+				Views/ObservableObject.swift,
+				"Views/Preview Content/Preview Assets.xcassets",
+				Views/StateAcross.swift,
+				Views/StateBind.swift,
+				Views/StateObject.swift,
+				Views/Storage.swift,
+				Views/Text.swift,
 			);
 			target = 1F11AE772C1F45EA002195D2 /* TestSwfitApp */;
 		};
