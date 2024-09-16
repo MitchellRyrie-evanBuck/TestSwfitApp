@@ -45,6 +45,7 @@
 				Assets.xcassets,
 				"Preview Content/Preview Assets.xcassets",
 				TestSwfitAppApp.swift,
+				Views/Anmation.swift,
 				Views/BasicViews/Button.swift,
 				Views/BasicViews/Combine.swift,
 				Views/BasicViews/Environment.swift,
@@ -60,6 +61,8 @@
 				Views/BasicViews/Storge.swift,
 				Views/BasicViews/Text.swift,
 				Views/ContentView.swift,
+				Views/MainView.swift,
+				Views/NavComponents.swift,
 			);
 			target = 1F11AE772C1F45EA002195D2 /* TestSwfitApp */;
 		};
