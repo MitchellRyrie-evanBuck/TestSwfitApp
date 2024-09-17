@@ -62,6 +62,12 @@
 				Views/BasicViews/Text.swift,
 				Views/Buttons/ButtonView.swift,
 				Views/Chart.swift,
+				Views/complexViews/ColorPickerView.swift,
+				Views/complexViews/DatePicker.swift,
+				Views/complexViews/PickerView.swift,
+				Views/complexViews/ProgressView.swift,
+				Views/complexViews/SegmentedView.swift,
+				Views/complexViews/SliderView.swift,
 				Views/ContentView.swift,
 				Views/ImgVideo/AnimatedImages.swift,
 				Views/ImgVideo/Consistent.swift,
@@ -70,7 +76,10 @@
 				Views/ImgVideo/mixture.swift,
 				Views/ImgVideo/PhotosPicker.swift,
 				Views/MainView.swift,
+				Views/Message/swipeActions.swift,
+				Views/Nav/NavigationStack.swift,
 				Views/NavComponents.swift,
+				Views/specialViews/SplitContentView.swift,
 				Views/Trend.swift,
 			);
 			target = 1F11AE772C1F45EA002195D2 /* TestSwfitApp */;

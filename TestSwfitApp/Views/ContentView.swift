@@ -25,7 +25,9 @@ struct ContentView: View {
           }
         NavComponents().tabItem{
           Label("组件", systemImage: "lasso" )
-          }
+          }.tag(4)
+        .toolbarBackground(.visible, for: .tabBar)
+        .toolbarBackground(Color.gray.opacity(0.8), for: .tabBar)
         NavComponents().tabItem{
           Label("Trend", systemImage: "rectangle.fill.on.rectangle.fill" )
           }

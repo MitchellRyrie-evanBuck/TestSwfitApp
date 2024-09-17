@@ -12,11 +12,11 @@ struct TestSwfitAppApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            ContentView().previewDevice("iPhone 14 Pro")
-            ContentView()
-                .preferredColorScheme(.dark)
-              ContentView()
-                .previewInterfaceOrientation(.landscapeLeft)
+            ContentView().previewDevice("iPhone 16 Pro")
+//            ContentView()
+//                .preferredColorScheme(.dark)
+//              ContentView()
+//                .previewInterfaceOrientation(.landscapeLeft)
       
         }
     }
