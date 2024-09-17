@@ -7,12 +7,23 @@
 
 import SwiftUI
 
-struct mixture: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
 
+struct MixtureView: View {
+  var body: some View {
+    ZStack {
+      Image("user_1")
+        .resizable()
+        .scaledToFill()
+        .edgesIgnoringSafeArea(.all)
+
+      Image("user_2")
+        .resizable()
+        .scaledToFill()
+        .blendMode(.multiply)
+        .opacity(0.7)
+    }
+  }
+}
 #Preview {
-    mixture()
+  MixtureView()
 }

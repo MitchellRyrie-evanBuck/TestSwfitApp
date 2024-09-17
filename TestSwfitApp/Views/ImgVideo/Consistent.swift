@@ -7,12 +7,24 @@
 
 import SwiftUI
 
-struct Consistent: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct ConsistentView: View {
+  @State private var changeColor = false
+
+  var body: some View {
+      Image("background")
+        .renderingMode(.template)
+        .resizable()
+        .aspectRatio(contentMode: .fit)
+        .frame(width: 200, height: 200)
+        .foregroundColor(changeColor ? .purple : .gray)
+        .onAppear {
+          withAnimation(.easeInOut(duration: 2).repeatForever(autoreverses: true)) {
+            changeColor.toggle()
+          }
+        }
     }
 }
 
 #Preview {
-    Consistent()
+  ConsistentView()
 }

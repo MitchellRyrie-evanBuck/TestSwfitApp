@@ -7,12 +7,16 @@
 
 import SwiftUI
 
-struct Img: View {
+struct ImgViews: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image("background") // 图片名称替换为你的图片文件名
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .frame(width: 270, height: 210)
+            .shadow(color: .gray, radius: 20, x: 0, y: 2)
     }
 }
 
 #Preview {
-    Img()
+    ImgViews()
 }

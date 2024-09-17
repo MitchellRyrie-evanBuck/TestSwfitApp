@@ -8,9 +8,19 @@
 import SwiftUI
 
 struct AnimatedImages: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+  @State private var isAnimating = false
+  
+  var body: some View {
+    Image("background")
+      .resizable()
+      .scaledToFit()
+      .scaleEffect(isAnimating ? 1.5 : 1.0)
+      .onAppear() {
+        withAnimation(.easeInOut(duration: 1.0).repeatForever(autoreverses: true)) {
+          isAnimating = true
+        }
+      }
+  }
 }
 
 #Preview {

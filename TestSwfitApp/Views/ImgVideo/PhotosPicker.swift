@@ -6,13 +6,53 @@
 //
 
 import SwiftUI
+import PhotosUI
 
-struct PhotosPicker: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct PhotosPickerView: View {
+  @State private var selectedItems = [PhotosPickerItem]()
+  @State private var images = [UUID: Image]()
+
+  var body: some View {
+    ZStack {
+      ScrollView {
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 100))]) {
+          ForEach(Array(images.keys), id: \.self) { key in
+            images[key]!
+              .resizable()
+              .scaledToFill()
+              .frame(width: 100, height: 100)
+              .clipped()
+          }
+        }
+      }
+
+      VStack {
+        Spacer()
+        PhotosPicker(selection: $selectedItems, matching: .images) {
+          Text("Select Images")
+        }
+        .task(id: selectedItems, {
+          await loadImages(from: selectedItems)
+        })
+        Spacer()
+      }
     }
+  }
+
+  private func loadImages(from items: [PhotosPickerItem]) async {
+    for item in items {
+      do {
+        let image = try await item.loadTransferable(type: Image.self)
+        if let image = image {
+          images[UUID()] = image
+        }
+      } catch {
+        print("Failed to load image: \(error)")
+      }
+    }
+  }
 }
 
 #Preview {
-    PhotosPicker()
+  PhotosPickerView()
 }
