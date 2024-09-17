@@ -60,9 +60,18 @@
 				Views/BasicViews/StateObject.swift,
 				Views/BasicViews/Storge.swift,
 				Views/BasicViews/Text.swift,
+				Views/Buttons/ButtonView.swift,
+				Views/Chart.swift,
 				Views/ContentView.swift,
+				Views/ImgVideo/AnimatedImages.swift,
+				Views/ImgVideo/Consistent.swift,
+				Views/ImgVideo/Filter.swift,
+				Views/ImgVideo/Img.swift,
+				Views/ImgVideo/mixture.swift,
+				Views/ImgVideo/PhotosPicker.swift,
 				Views/MainView.swift,
 				Views/NavComponents.swift,
+				Views/Trend.swift,
 			);
 			target = 1F11AE772C1F45EA002195D2 /* TestSwfitApp */;
 		};

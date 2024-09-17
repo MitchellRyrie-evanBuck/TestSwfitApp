@@ -20,8 +20,14 @@ struct ContentView: View {
           .tabItem {
             Label("bell", systemImage: "bell").symbolVariant(.fill)
           }
+        Chart().tabItem{
+          Label("Trend", systemImage: "chart.bar" )
+          }
         NavComponents().tabItem{
           Label("组件", systemImage: "lasso" )
+          }
+        NavComponents().tabItem{
+          Label("Trend", systemImage: "rectangle.fill.on.rectangle.fill" )
           }
         }
     }
