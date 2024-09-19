@@ -18,18 +18,18 @@ struct ContentView: View {
           }
         AnmationView()
           .tabItem {
-            Label("bell", systemImage: "bell").symbolVariant(.fill)
+            Label("Anmation", systemImage: "command.circle.fill").symbolVariant(.fill)
           }
-        Chart().tabItem{
+        Trend().tabItem{
           Label("Trend", systemImage: "chart.bar" )
           }
-        NavComponents().tabItem{
+        Chart().tabItem{
           Label("组件", systemImage: "lasso" )
           }.tag(4)
-        .toolbarBackground(.visible, for: .tabBar)
-        .toolbarBackground(Color.gray.opacity(0.8), for: .tabBar)
-        NavComponents().tabItem{
-          Label("Trend", systemImage: "rectangle.fill.on.rectangle.fill" )
+          .toolbarBackground(.visible, for: .tabBar)
+          .toolbarBackground(Color.gray.opacity(0.8), for: .tabBar)
+        UserContentView().tabItem{
+          Label("user", systemImage: "person.fill" )
           }
         }
     }
