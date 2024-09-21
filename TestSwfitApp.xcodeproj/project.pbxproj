@@ -57,6 +57,7 @@
 				Views/Animation/SpringAnView.swift,
 				Views/Animation/TransitionsAnView.swift,
 				Views/Anmation.swift,
+				Views/Audio/CustomizingAudio.swift,
 				Views/Audio/PlayerAudio.swift,
 				Views/Audio/PlayerVideo.swift,
 				Views/BasicViews/Button.swift,
