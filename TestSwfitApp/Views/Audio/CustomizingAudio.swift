@@ -8,7 +8,7 @@
 import SwiftUI
 import AVKit
 
-struct PlayerView: UIViewControllerRepresentable {
+struct PlayerCustumView: UIViewControllerRepresentable {
   typealias UIViewControllerType = AVPlayerViewController
 
   let player: AVPlayer
@@ -29,7 +29,7 @@ struct CustomizingAudio: View {
 
     var body: some View {
       VStack {
-        PlayerView(player: player)
+        PlayerCustumView(player: player)
         HStack(spacing: 20) {
           Button(action: {
             self.player.volume = max(self.player.volume - 0.1, 0.0)

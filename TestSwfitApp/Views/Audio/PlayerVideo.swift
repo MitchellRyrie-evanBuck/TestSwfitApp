@@ -10,12 +10,12 @@ import AVKit
 
 struct VideoPlayerView: View {
   // Create a URL for the video file in your app bundle
-  let videoURL: URL? = Bundle.main.url(forResource: "BookTrailer", withExtension: "m4v")
+  let videoURL: URL? = Bundle.main.url(forResource: "TestVideo", withExtension: "mp4")
 
   var body: some View {
     VStack {
       if let url = videoURL {
-        VideoPlayer(player: AVPlayer(url: url))
+        VideoPlayer(player: AVPlayer(url: url)).edgesIgnoringSafeArea(.all)
       } else {
         Text("Video not found")
       }

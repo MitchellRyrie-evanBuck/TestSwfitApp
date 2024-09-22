@@ -25,9 +25,8 @@ struct ContentView: View {
           }
         Chart().tabItem{
           Label("组件", systemImage: "lasso" )
-          }.tag(4)
-          .toolbarBackground(.visible, for: .tabBar)
-          .toolbarBackground(Color.gray.opacity(0.8), for: .tabBar)
+          }
+      
         UserContentView().tabItem{
           Label("user", systemImage: "person.fill" )
           }
