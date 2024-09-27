@@ -37,6 +37,9 @@ let exampleCategories: [ExampleCategory] = [
         Example(name: "Combine 数据", destination: AnyView(ContentCombineView())),
         Example(name: "Storage 数据", destination: AnyView(ContentStorageView())),
         Example(name: "ContentObservableObjectView 数据", destination: AnyView(ContentObservableObjectView()))
+    ]),
+    ExampleCategory(name: "Layout", examples: [
+       
     ])
 ]
 
