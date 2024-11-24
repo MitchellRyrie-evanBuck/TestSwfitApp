@@ -21,6 +21,9 @@ struct ConfirmationContentView: View {
       Button("Empty Trash", role: .destructive) {
         // Handle empty trash action.
       }
+      Button("Trash", role: .destructive) {
+        // Handle empty trash action.
+      }
       Button("Cancel", role: .cancel) {
         isShowingDialog = false
       }

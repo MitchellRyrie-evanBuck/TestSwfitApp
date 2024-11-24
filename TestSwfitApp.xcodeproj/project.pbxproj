@@ -144,6 +144,7 @@
 				"Views/Progress Indicators/IndicateIndeterminateProgressView.swift",
 				"Views/Progress Indicators/SpinnerContentView.swift",
 				Views/specialViews/SplitContentView.swift,
+				Views/TestComponents/CaptionedPhoto.swift,
 				Views/TextInput/CreateScrollable.swift,
 				Views/TextInput/FormatTextInput.swift,
 				Views/TextInput/KeyboardScroll.swift,
